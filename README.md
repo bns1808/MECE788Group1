@@ -23,22 +23,23 @@ random_forest.ipynb: Implementation of Random Forest for anomaly detection.
 lstm.ipynb: Implementation of LSTM for anomaly detection.
 autoencoder.ipynb: Implementation of Autoencoder for anomaly detection.
 
-Results
+## Results
+
 Random Forest achieved an accuracy of X% on the test set.
 LSTM achieved an accuracy of Y% on the test set.
 Autoencoder achieved an accuracy of Z% on the test set.
 
-Conclusion
+## Conclusion
 
 In this project, we explored the application of Random Forest, LSTM, and Autoencoder for anomaly detection on the Tennessee Eastman Process dataset. Each model demonstrated varying degrees of success in detecting anomalies. Further experimentation and fine-tuning may be required to improve the performance of these models.
 
-References
+## References
 
 Tennessee Eastman Process dataset: link
 Example reference 1
 Example reference 2
 
-Contributors
+## Contributors
 
 Your Name - @your-username
 Contributor 2 - @contributor-2-username
