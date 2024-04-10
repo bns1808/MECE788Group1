@@ -13,6 +13,7 @@ The Tennessee Eastman Process dataset is available [here](link-to-dataset). It c
 ## Usage
 
 1. Clone the repository:
+```bash
 git clone https://github.com/your-username/tennessee-eastman-process.git
 
 2. Install the required dependencies:
