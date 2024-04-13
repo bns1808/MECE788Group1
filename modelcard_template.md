@@ -74,8 +74,6 @@ Since the dataset is synthetic and does not contain any real personal or sensiti
 
 ### References
 - "Introduction to the Tennessee Eastman Process Simulation Dataset", [Link to the dataset description and download](URL_to_dataset).
-- "Real-Time Fault Detection Using Random Forest", Journal of Industrial Systems, 2023.
-- "LSTM Networks for Time Series Analysis", Journal of Machine Learning Research, 2024.
 
 ### License
 This model is released under the MIT License, which permits use, modification, distribution, and private use. This license is permissive and allows for commercial use, but it does not provide any warranty.
