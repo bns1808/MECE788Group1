@@ -1,14 +1,23 @@
----
-# For reference on model card metadata, see the spec: https://github.com/huggingface/hub-docs/blob/main/modelcard.md?plain=1
-# Doc / guide: https://huggingface.co/docs/hub/model-cards
-{{ card_data }}
----
 
-# Model Card for {{ model_id | default("Model ID", true) }}
 
-<!-- Provide a quick summary of what the model is/does. -->
+# Early Process Fault Diagnosis
 
-{{ model_summary | default("", true) }}
+**Model ID**: Tennessee-Eastman-Fault-Detection
+
+**Summary**: This model leverages a combination of RandomForestClassifier and LSTM networks to monitor and classify faults in real time using the Tennessee Eastman Process Simulation Dataset. Initially, it detects the occurrence of a fault, then identifies the specific class of the fault for targeted interventions.
+
+# Table of Contents
+
+- [Model Name](#model-name)
+- [Data](#data)
+- [Training](#training)
+- [Evaluation](#evaluation)
+- [Ethical Considerations](#ethical-considerations)
+- [Caveats and Recommendations](#caveats-and-recommendations)
+- [Maintenance](#maintenance)
+- [License](#license)
+- [Citation](#citation)
+
 
 ## Model Details
 
