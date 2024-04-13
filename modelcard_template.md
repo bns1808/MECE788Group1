@@ -74,9 +74,13 @@ Since the dataset is synthetic and does not contain any real personal or sensiti
 
 ### References
 - "Introduction to the Tennessee Eastman Process Simulation Dataset", [Link to the dataset description and download](URL_to_dataset).
+- [1] S. Zheng and J. Zhao, “A new unsupervised data mining method based on the stacked autoencoder for chemical process fault diagnosis,” Computers & Chemical Engineering, vol. 135, p. 106755, Apr. 2020, doi: 10.1016/j.compchemeng.2020.106755.
+- [2] C. A. Rieth, B. D. Amsel, R. Tran, and M. B. Cook, “Issues and Advances in Anomaly Detection Evaluation for Joint Human-Automated Systems,” in Advances in Human Factors in Robots and Unmanned Systems, vol. 595, J. Chen, Ed., in Advances in Intelligent Systems and Computing, vol. 595. , Cham: Springer International Publishing, 2018, pp. 52–63. doi: 10.1007/978-3-319-60384-1_6.
+- [3] A. Melo, M. M. Câmara, N. Clavijo, and J. C. Pinto, “Open benchmarks for assessment of process monitoring and fault diagnosis techniques: A review and critical analysis,” Computers & Chemical Engineering, vol. 165, p. 107964, Sep. 2022, doi: 10.1016/j.compchemeng.2022.107964.
+
 
 ### License
-This model is released under the MIT License, which permits use, modification, distribution, and private use. This license is permissive and allows for commercial use, but it does not provide any warranty.
+
 
 ### Contact Information
 - **Lead Developers**: Madhura, Mansimran, Thomas, Yarooj 
