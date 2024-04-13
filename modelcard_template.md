@@ -8,7 +8,7 @@
 
 # Table of Contents
 
-- [Model Name](#model-name)
+- [Model Details](#model-details)
 - [Data](#data)
 - [Training](#training)
 - [Evaluation](#evaluation)
@@ -20,6 +20,12 @@
 
 
 ## Model Details
+
+- **Model Name**: Tennessee Eastman Fault Detection Model
+- **Model Version**: 1.0
+- **Model Type**: Hybrid (RandomForest for fault detection, LSTM for fault classification)
+- **Developers**: MECE788Group1
+- **Release Date**: April 13, 2024
 
 ### Model Description
 
