@@ -1,2 +1,7 @@
 
 main/data.csv
+main/rf_model.pkl
+main/rf_model_conc.pkl
+main/rf_model_conc_test.pkl
+main/rf_model_shuffled.pkl
+main/rf_model_test.pkl
