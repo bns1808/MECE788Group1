@@ -1,10 +1,12 @@
 # Tennessee Eastman Process Dataset Analysis and Anomaly Detection
 
-This repository contains the implementation of machine learning models including Random Forest, LSTM (Long Short-Term Memory), and Autoencoder for the analysis and anomaly detection on the Tennessee Eastman Process dataset.
+This repository contains the implementation of machine learning models including Random Forest and Bi-directional LSTM (Long Short-Term Memory) followed by an ANN neural classifier. The objective of the repository is to achieve anomaly detection as early as possible and then classify them into the fault type for post analysis of faults in industries.
 
 ## Introduction
 
-The Tennessee Eastman Process dataset is a widely used benchmark dataset in the field of process monitoring and fault detection. It simulates a chemical process with various operating conditions and potential faults. The goal of this project is to develop machine learning models to detect anomalies or faults in the process.
+Usual alarm systems in industries are mechanized to work on pre-set threshold values for different kinds of control variables like pressure, flow rate, etc. These alarm systems miss out anamolies that are captured by combination of disturbances in more than one control variables. 
+
+The Tennessee Eastman Process dataset is a widely used benchmark dataset in the field of process monitoring and fault detection. It simulates a chemical process with various operating conditions and potential faults. The goal of this project is to develop machine learning models to detect anomalies as early as possible and classify the fault type in the process.
 
 ## Dataset
 
@@ -18,10 +20,18 @@ git clone https://github.com/your-username/tennessee-eastman-process.git
 2. Install the required dependencies:
 pip install -r requirements.txt
 
-3. Execute the Jupyter notebooks to train and evaluate the models:
-random_forest.ipynb: Implementation of Random Forest for anomaly detection.
-lstm.ipynb: Implementation of LSTM for anomaly detection.
-autoencoder.ipynb: Implementation of Autoencoder for anomaly detection.
+3. EDA has been performed separately in the notebook named "[EDA.ipynb](https://github.com/bns1808/MECE788Group1/blob/main/main/EDA.ipynb)", located in the main folder of the repo
+
+4. Execute the Jupyter notebook named "RF and LSTM Combined - TK.ipynb" to train and evaluate the models:
+For each session, the data is imported from google drive, stored into corresponding variables and then the files are temporarily deleted from the directory.
+
+Our intital dataset has some instances for each fault type, where the classes are mislabelled. So next part of the code deals with labels and adds a column named "faultOccurence", that sets normal mode as '0', whereas all other fault types as '1'. This 
+
+With analysis from the EDA, it is followed by data pre-processing. This deals with capturing the temporal nature of the dataset by introducing the rolling window and taking lagged intervals as new features.
+
+A pipeline is defined, that has a standardsclaer transformer, succeeded by the Random Forest binary classifier.
+
+
 
 ## Results
 
