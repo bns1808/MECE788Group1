@@ -10,58 +10,58 @@ The Tennessee Eastman Process dataset is a widely used benchmark dataset in the 
 
 ## Dataset
 
-The Tennessee Eastman Process dataset is available [here](link-to-dataset). It contains measurements from various sensors in the chemical process under different operating conditions and fault scenarios.
+The Tennessee Eastman Process dataset is available [here](https://www.kaggle.com/datasets/averkij/tennessee-eastman-process-simulation-dataset). It contains measurements from various sensors in the chemical process under different operating conditions and fault scenarios.
 
 ## Usage
 
-1. Clone the repository:
-git clone https://github.com/your-username/tennessee-eastman-process.git
+"main" FOLDER
 
-2. Install the required dependencies:
-pip install -r requirements.txt
+1. EDA has been performed separately in the notebook named "[EDA.ipynb](https://github.com/bns1808/MECE788Group1/blob/main/main/EDA.ipynb)", located in the main folder of the repo
 
-3. EDA has been performed separately in the notebook named "[EDA.ipynb](https://github.com/bns1808/MECE788Group1/blob/main/main/EDA.ipynb)", located in the main folder of the repo
+2. Execute the Jupyter notebook named "RF and LSTM Combined - TK.ipynb" to train and evaluate the models:
 
-4. Execute the Jupyter notebook named "RF and LSTM Combined - TK.ipynb" to train and evaluate the models:
-For each session, the data is imported from google drive, stored into corresponding variables and then the files are temporarily deleted from the directory.
+ @ For each session, the data is imported from google drive, stored into corresponding variables and then the  files are temporarily deleted from the directory.
 
-Our intital dataset has some instances for each fault type, where the classes are mislabelled. So next part of the code deals with labels and adds a column named "faultOccurence", that sets normal mode as '0', whereas all other fault types as '1'. This 
+ @ Our intital dataset has some instances for each fault type, where the classes are mislabelled. So next part of the code deals with labels and adds a column named "faultOccurence", that sets normal mode as '0', whereas all other fault types as '1'. This 
 
-With analysis from the EDA, it is followed by data pre-processing. This deals with capturing the temporal nature of the dataset by introducing the rolling window and taking lagged intervals as new features.
+ @ With analysis from the EDA, it is followed by data pre-processing. This deals with capturing the temporal nature of the dataset by introducing the rolling window and taking lagged intervals as new features.
 
-A pipeline is defined, that has a standardsclaer transformer, succeeded by the Random Forest binary classifier.
+ @ A pipeline is defined, that has a standardsclaer transformer, succeeded by the Random Forest binary classifier.
 
-Evaluation is carried out on the basis of precision, recall and f1-score metrics.
+ @ Evaluation is carried out on the basis of precision, recall and f1-score metrics.
 
-The predicted values from this pipeline are sent as test set for the Bi-directional LSTM followed by ANN classifier model. 
+ @ The predicted values from this pipeline are sent as test set for the Bi-directional LSTM followed by ANN classifier model. 
 
-For this problem the initial imported dataset is used, without any data-preprocessing and feature engineering. The sliding window technique is used to make the sequences that goes into training the model.
+ @ For this problem the initial imported dataset is used, without any data-preprocessing and feature engineering. The sliding window technique is used to make the sequences that goes into training the model.
 
-To make a multi classifier, the LSTM model is attached to a ANN neural classifier that has 21 neurons in the last layers, indicating 21 classes.
+ @ To make a multi classifier, the LSTM model is attached to a ANN neural classifier that has 21 neurons in the last layers, indicating 21 classes.
 
-FInally the evaluation is carried out on the basis of precision, recall and f1-score metrics.
+ @ Finally the evaluation is carried out on the basis of precision, recall and f1-score metrics.
 
-5. "model data flow-Data flow.draw.io.png" file has the pictorial overview of the model.
+3. "data_flow.pdf" file has the pictorial overview of the model.
 
-6. "secondary models" folder contains all the other different kinds of model and pre-processed data that were explored to get to the model with best evaluation metrics.
+4. "system_context.pdf", pictorially shows how the model fits into larger industrial system.
 
-## Results (to be filled soon)
+"secondary models" FOLDER
 
-Random Forest achieved an accuracy of X% on the test set.
-LSTM achieved an accuracy of Y% on the test set.
-Autoencoder achieved an accuracy of Z% on the test set.
+1. Folder named "EDA" consists the rest of the trials on the dataset to get the best insights
 
-## Conclusion (to be filled)
+2. "Random Forest (Aarooj).ipynb" is an experimental model that tried random forest without adding lagged features.
 
-In this project, we explored the application of Random Forest, LSTM, and Autoencoder for anomaly detection on the Tennessee Eastman Process dataset. Each model demonstrated varying degrees of success in detecting anomalies. Further experimentation and fine-tuning may be required to improve the performance of these models.
+3. "ANN + Autoencoder (Thomas).ipynb" and "Autoencoder + ANN (Aarooj).ipynb" tried the mentioned models to see the effect of dimensionality reduction using the latent space or the bottleneck layer of the Autoencoder and attaching it to a ANN classifier. Though both notebooks have the same architecture, the hyperparameters are different.
+
+"Model Card.md" [here](https://github.com/bns1808/MECE788Group1/blob/main/Model%20card.md) file discusses the overall project.
+
+"Readme.md" file gives the information about all the files location, usage and objective.
+
+## Results
+
+1. Random Forest binary predictor and classifier: 75%+ fault detection in first few minutes, with a precision of 93% for "normal mode - class 0" and 95% for "faulty mode - class 1"
+
+2. BiLSTM achieved a mean precision of 86% for all 21 classes of faulty modes, and 98% precision on removal of fault 3,9 and 15.
 
 ## References
 - "Introduction to the Tennessee Eastman Process Simulation Dataset", [Link to the dataset description and download](URL_to_dataset).
 - [1] S. Zheng and J. Zhao, “A new unsupervised data mining method based on the stacked autoencoder for chemical process fault diagnosis,” Computers & Chemical Engineering, vol. 135, p. 106755, Apr. 2020, doi: 10.1016/j.compchemeng.2020.106755.
 - [2] C. A. Rieth, B. D. Amsel, R. Tran, and M. B. Cook, “Issues and Advances in Anomaly Detection Evaluation for Joint Human-Automated Systems,” in Advances in Human Factors in Robots and Unmanned Systems, vol. 595, J. Chen, Ed., in Advances in Intelligent Systems and Computing, vol. 595. , Cham: Springer International Publishing, 2018, pp. 52–63. doi: 10.1007/978-3-319-60384-1_6.
 - [3] A. Melo, M. M. Câmara, N. Clavijo, and J. C. Pinto, “Open benchmarks for assessment of process monitoring and fault diagnosis techniques: A review and critical analysis,” Computers & Chemical Engineering, vol. 165, p. 107964, Sep. 2022, doi: 10.1016/j.compchemeng.2022.107964.
-
-## Contributors
-
-Your Name - @your-username
-Contributor 2 - @contributor-2-username
