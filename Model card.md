@@ -50,6 +50,9 @@ The model utilizes the Tennessee Eastman Process Simulation Dataset, which is sy
 ### Privacy
 Since the dataset is synthetic and does not contain any real personal or sensitive data, privacy concerns related to personal data are inherently mitigated. Our model does not require or process any real-world personal information, aligning with privacy best practices.
 
+### Security
+There's possibility of data leakage in real industrial processes. Care should be given to ensure this does not happen.
+
 ## Limitations and Recommendations
 
 ### Known Limitations
