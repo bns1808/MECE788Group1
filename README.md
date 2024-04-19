@@ -14,35 +14,45 @@ The Tennessee Eastman Process dataset is available [here](https://www.kaggle.com
 
 ## Usage
 
-"main" FOLDER
+A. "main" FOLDER
 
 1. EDA has been performed separately in the notebook named "[EDA.ipynb](https://github.com/bns1808/MECE788Group1/blob/main/main/EDA.ipynb)", located in the main folder of the repo
 
 2. Execute the Jupyter notebook named "RF and LSTM Combined - TK.ipynb" to train and evaluate the models:
 
- @ For each session, the data is imported from google drive, stored into corresponding variables and then the  files are temporarily deleted from the directory.
+    For each session, the data is imported from google drive, stored into corresponding variables and then
+    the files are temporarily deleted from the directory.
 
- @ Our intital dataset has some instances for each fault type, where the classes are mislabelled. So next part of the code deals with labels and adds a column named "faultOccurence", that sets normal mode as '0', whereas all other fault types as '1'. This 
+    Our intital dataset has some instances for each fault type, where the classes are mislabelled.
+    So next part of the code deals with labels and adds a column named "faultOccurence", that sets 
+    normal mode as '0', whereas all other fault types as '1'. This 
 
- @ With analysis from the EDA, it is followed by data pre-processing. This deals with capturing the temporal nature of the dataset by introducing the rolling window and taking lagged intervals as new features.
+    With analysis from the EDA, it is followed by data pre-processing. This deals with capturing
+    the temporal nature of the dataset by introducing the rolling window and taking lagged intervals
+    as new features.
 
- @ A pipeline is defined, that has a standardsclaer transformer, succeeded by the Random Forest binary classifier.
+    A pipeline is defined, that has a standardsclaer transformer, succeeded by the Random Forest 
+    binary classifier.
 
- @ Evaluation is carried out on the basis of precision, recall and f1-score metrics.
+    Evaluation is carried out on the basis of precision, recall and f1-score metrics.
 
- @ The predicted values from this pipeline are sent as test set for the Bi-directional LSTM followed by ANN classifier model. 
+    The predicted values from this pipeline are sent as test set for the Bi-directional LSTM 
+    followed by ANN classifier model. 
 
- @ For this problem the initial imported dataset is used, without any data-preprocessing and feature engineering. The sliding window technique is used to make the sequences that goes into training the model.
+    For this problem the initial imported dataset is used, without any data-preprocessing and 
+    feature engineering. The sliding window technique is used to make the sequences that goes
+    into training the model.
 
- @ To make a multi classifier, the LSTM model is attached to a ANN neural classifier that has 21 neurons in the last layers, indicating 21 classes.
+    To make a multi classifier, the LSTM model is attached to a ANN neural classifier that has 21 
+    neurons in the last layers, indicating 21 classes.
 
- @ Finally the evaluation is carried out on the basis of precision, recall and f1-score metrics.
+    Finally the evaluation is carried out on the basis of precision, recall and f1-score metrics.
 
 3. "data_flow.pdf" file has the pictorial overview of the model.
 
 4. "system_context.pdf", pictorially shows how the model fits into larger industrial system.
 
-"secondary models" FOLDER
+B. "secondary models" FOLDER
 
 1. Folder named "EDA" consists the rest of the trials on the dataset to get the best insights
 
@@ -50,9 +60,9 @@ The Tennessee Eastman Process dataset is available [here](https://www.kaggle.com
 
 3. "ANN + Autoencoder (Thomas).ipynb" and "Autoencoder + ANN (Aarooj).ipynb" tried the mentioned models to see the effect of dimensionality reduction using the latent space or the bottleneck layer of the Autoencoder and attaching it to a ANN classifier. Though both notebooks have the same architecture, the hyperparameters are different.
 
-"Model Card.md" [here](https://github.com/bns1808/MECE788Group1/blob/main/Model%20card.md) file discusses the overall project.
+C. "Model Card.md" [here](https://github.com/bns1808/MECE788Group1/blob/main/Model%20card.md) file discusses the overall project.
 
-"Readme.md" file gives the information about all the files location, usage and objective.
+D. "Readme.md" file gives the information about all the files location, usage and objective.
 
 ## Results
 
