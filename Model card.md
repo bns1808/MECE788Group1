@@ -22,7 +22,7 @@
 - **Model Version**: 1.0
 - **Model Type**: Hybrid (RandomForest for fault detection, LSTM for fault classification)
 - **Developers**: MECE788Group1
-- **Release Date**: April 13, 2024
+- **Release Date**: April 19, 2024
 
 ## Intended Use
 
@@ -34,15 +34,13 @@
 ## Training and Evaluation
 
 ### Training Procedure
-The model was trained using the Tennessee Eastman Process Simulation Dataset. The RandomForest classifier was first trained to detect the occurrence of faults in real-time. Training parameters included a maximum depth of 40, 200 estimators, and a random state for reproducibility. The LSTM network was subsequently trained to classify the type of fault based on sequences of process data, using a learning rate of 0.001 and 200 epochs.
+The model was trained using the Tennessee Eastman Process Simulation Dataset. The RandomForest classifier was first trained to detect the occurrence of faults in real-time. Training parameters included a maximum depth of 40, with 200 estimators, and a random state for reproducibility. The LSTM network was subsequently trained to classify the type of fault based on sequences of process data, using a learning rate of 0.001 and 200 epochs.
 
 ### Evaluation Metrics
-The model's performance was evaluated using precision and F1 score for the RandomForest classifier, and loss for the LSTM. The RandomForest achieved an accuracy of 80% and an F1 score of __, while the LSTM reached a categorical accuracy of __ with a loss of __ on the test dataset.
+The model's performance was evaluated using precision and F1 score for the RandomForest classifier, and loss for the LSTM. The RandomForest achieved an accuracy of 95% and an F1 score of 93%, while BiLSTM achieved a mean precision of 86% for all 21 classes of faulty modes, and 98% precision on removal of fault 3,9 and 15.
 
 ### Baseline Comparison
-Compared to a baseline SVM classifier that achieved an 85% accuracy and an F1 score of 0.82, the RandomForest classifier shows significant improvement in both accuracy and precision. The LSTM's ability to classify fault types surpasses that of a traditional RNN, which achieved a categorical accuracy of 90%.
-
-
+Compared to a baseline XGBoost classifier that achieved an 80% accuracy and an F1 score of 0.82, the RandomForest classifier shows significant improvement in both accuracy and precision. The LSTM's ability to classify fault types surpasses that of a traditional RNN.
 
 ## Ethical Considerations
 
@@ -51,10 +49,6 @@ The model utilizes the Tennessee Eastman Process Simulation Dataset, which is sy
 
 ### Privacy
 Since the dataset is synthetic and does not contain any real personal or sensitive data, privacy concerns related to personal data are inherently mitigated. Our model does not require or process any real-world personal information, aligning with privacy best practices.
-
-### Security
-
-
 
 ## Limitations and Recommendations
 
@@ -69,7 +63,6 @@ Since the dataset is synthetic and does not contain any real personal or sensiti
 - **Ethical Use**: Ensure that the model’s use complies with local regulations and ethical standards, particularly in making decisions that could affect the safety and reliability of industrial processes.
 
 
-
 ## Additional Information
 
 ### References
@@ -79,10 +72,7 @@ Since the dataset is synthetic and does not contain any real personal or sensiti
 - [3] A. Melo, M. M. Câmara, N. Clavijo, and J. C. Pinto, “Open benchmarks for assessment of process monitoring and fault diagnosis techniques: A review and critical analysis,” Computers & Chemical Engineering, vol. 165, p. 107964, Sep. 2022, doi: 10.1016/j.compchemeng.2022.107964.
 
 
-### License
-
-
 ### Contact Information
-- **Lead Developers**: Madhura, Mansimran, Thomas, Yarooj 
-- **Email**: [johndoe@example.com](mailto:johndoe@example.com)
-- **GitHub**: [johndoe](https://github.com/johndoe)
+- **Lead Developers**: Mansimran, Yarooj, Thomas, Madhura 
+- **Email**: [mansimra@ualberta.ca](mailto:mansimra@ualberta.ca), [mali19@ualberta.ca](mailto:mali19@ualberta.ca), [tkaminsk@ualberta.ca](tkaminsk@ualberta.ca), [mdeval@ualberta.ca](mailto:mdeval@ualberta.ca)
+
