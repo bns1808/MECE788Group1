@@ -44,14 +44,20 @@ Compared to a baseline XGBoost classifier that achieved an 80% accuracy and an F
 
 ## Ethical Considerations
 
+## Ethical Considerations
+
 ### Fairness and Bias
-The model utilizes the Tennessee Eastman Process Simulation Dataset, which is synthetic and designed to simulate typical process faults. Given the synthetic nature of the data, traditional biases related to human factors are not present. However, we continuously evaluate the model’s decision-making process to ensure no algorithmic biases are introduced during development. Techniques such as feature importance analysis are used to monitor any potential biases.
+The model utilizes the Tennessee Eastman Process Simulation Dataset, which is synthetic and designed to simulate typical process faults. While the synthetic nature of the data precludes traditional biases associated with human factors, it is still important to continuously scrutinize the model's decision-making processes to ensure no algorithmic biases are introduced during development. We employ techniques such as feature importance analysis to monitor and mitigate any potential biases. These steps help in identifying any unintended model behaviors or biases that might affect the model's generalization across various synthetic scenarios.
 
 ### Privacy
-Since the dataset is synthetic and does not contain any real personal or sensitive data, privacy concerns related to personal data are inherently mitigated. Our model does not require or process any real-world personal information, aligning with privacy best practices.
+Since the dataset is synthetic and does not contain any real personal or sensitive data, privacy concerns related to personal data are inherently mitigated. Our model does not require or process any real-world personal information, ensuring compliance with privacy best practices. This approach not only minimizes privacy risks but also represents how synthetic data can be used in developing models without compromising ethical standards.
 
 ### Security
-There's possibility of data leakage in real industrial processes. Care should be given to ensure this does not happen.
+Given the application context of industrial process monitoring, ensuring the security of data and model predictions is crucial, particularly to prevent data leakage and potential exploitation of the model's output. It is recommended that industrial setups using this model have stringent access controls and monitoring systems in place to detect and respond to any unauthorized access or anomalies in real-time data processing.
+
+### Transparency
+We are committed to maintaining transparency in how our models operate. Detailed documentation of the model's design, training process, and performance evaluations are made available to all users. This transparency would fosters trust and enable users to understand and verify the model's functionality and limitations.
+
 
 ## Limitations and Recommendations
 
