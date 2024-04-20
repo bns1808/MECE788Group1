@@ -18,7 +18,7 @@ A. "main" FOLDER
 
 1. EDA has been performed separately in the notebook named "[EDA.ipynb](https://github.com/bns1808/MECE788Group1/blob/main/main/EDA.ipynb)", located in the main folder of the repo
 
-2. Execute the Jupyter notebook named "RF and LSTM Combined - TK.ipynb" to train and evaluate the models:
+2. Execute the Jupyter notebook named "RF and LSTM Combined.ipynb" to train and evaluate the models:
 
     For each session, the data is imported from google drive, stored into corresponding variables and then
     the files are temporarily deleted from the directory.
